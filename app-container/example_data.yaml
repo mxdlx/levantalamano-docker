@@ -615,6 +615,8 @@
   fields: {name: Can delete activity, content_type: 72, codename: delete_activity}
 
 #### Definicion de usuarios
+# usuario: admin
+# password: admin
 - model: auth.user
   pk: 1
   fields:

@@ -31,7 +31,7 @@ El `docker-compose` está configurado para que la aplicación escuche en el host
 * `http://127.0.0.1:8000/admin`: panel de administración.
 
 #### Panel de administración
-En el archivo utilizado como `ENTRYPOINT` del contenedor se define un usuario administrador para la aplicación:
+En app-container/example-data.yaml se define un usuario administrador para la aplicación:
 
 * Usuario: admin
 * Password: admin
