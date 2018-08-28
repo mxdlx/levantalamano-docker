@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:3
+    container_name: redis
+    networks:
+      - vi
+
+  elastic:
+    image: elasticsearch:2.4-alpine
+    container_name: elastic
+    networks:
+      - vi
+
+  memcache:
+    image: memcached:1.5-alpine
+    container_name: memcache
+    networks:
+      - vi
+
+  nginx:
+    image: nginx:1.15-alpine
+    container_name: nginx
+    depends_on: 
+      - app
+    networks:
+      - vi
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./app-code/static:/static:ro
+
+  app:
+    image: testing/votainteligente
+    build: ./app-container
+    container_name: levantalamano
+    networks:
+      - vi
+    volumes:
+      - ./app-code:/app-code:rw
+
+networks:
+  vi:
+    driver: bridge
