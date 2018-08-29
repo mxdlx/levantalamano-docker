@@ -1,5 +1,5 @@
 SECRET_KEY
-DEBUG = False
+DEBUG = True
 HAYSTACK_CONNECTIONS = {
         'default': {
             'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',

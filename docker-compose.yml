@@ -19,6 +19,7 @@ services:
     networks:
       - vi
 
+  # Para produccion
   nginx:
     image: nginx:1.15-alpine
     container_name: nginx
