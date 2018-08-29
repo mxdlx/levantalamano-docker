@@ -1,7 +1,13 @@
 # [Levanta la mano ~ Standalone (votainteligente)](https://github.com/ciudadanointeligente/votainteligente-portal-electoral) en Docker
 
+## Atención
+**Tanto el directorio app-code como sus subdirectorios tienen permisos de escritura, lectura y ejecución (777) mientras que los ficheros tienen permisos de escritura y lectura**
+
+Esto se debe a que este compose es para un entorno de desarrollo.
+
+### VotaInteligente -> Levanta la mano
 Este repositorio contiene un deploy con [docker-compose](https://docs.docker.com/compose/) de [VotaInteligente](https://github.com/ciudadanointeligente/votainteligente-portal-electoral) a modo de entorno de desarrollo local utilizando "Levanta la mano" como aplicación específica.
-Esto es casi un clon del deploy de VotaInteligente que hice anteriormente que se encuentra [aquí](https://github.com/mxdlx/votainteligente-docker), esta versión es específica y orientada a ser production-ready aunque faltan terminar varios detalles.
+Esto es casi un clon del deploy de VotaInteligente que hice anteriormente que se encuentra [aquí](https://github.com/mxdlx/votainteligente-docker), esta versión es específica y orientada a desarrolladores.
 
 ### Pasos a seguir
 1. Lo primero es clonar este repositorio.

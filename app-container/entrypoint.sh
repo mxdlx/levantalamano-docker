@@ -13,7 +13,7 @@ if [ ! -f /app-code/requirements.txt ]; then
   mkdir /app-code/cache
 
   # Permisos de directorio del codigo
-  find /app-code -type d -exec chmod 755 {} \;
+  find /app-code -type d -exec chmod 777 {} \;
   find /app-code -type f -exec chmod 666 {} \;
 
   # Django manage
